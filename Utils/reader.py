@@ -26,8 +26,7 @@ class Reader:
             file_list = []
 
             with open(file, 'r') as sped:
-                for line in sped:
-                    file_list.append(line)
+                file_list = sped.read().splitlines()
 
             self._file_dict[file] = file_list
 

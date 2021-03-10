@@ -2,7 +2,7 @@
 import Utils
 import config
 
-# Leitor SPED
+# SPED Reader
 file_reader = Utils.Reader(config.DATA_DIR)
 files = file_reader.ReadFiles()
 
