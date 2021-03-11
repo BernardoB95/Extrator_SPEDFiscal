@@ -19,7 +19,7 @@ class ProcessingEngine:
 
                 reg = line[1:5]
 
-                # TODO Create Factory with builder to instanciate
+                # TODO Create Factory with builder to instantiate
                 reg_factory = load_factory(reg)
 
                 # reg_obj = reg_factory.create_block_object()
