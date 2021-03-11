@@ -22,5 +22,5 @@ class ProcessingEngine:
                 # TODO Create Factory with builder to instanciate
                 reg_factory = load_factory(reg)
 
-                reg_obj = reg_factory.create_block_object()
-                reg_obj.tell()
+                # reg_obj = reg_factory.create_block_object()
+                # reg_obj.tell()
