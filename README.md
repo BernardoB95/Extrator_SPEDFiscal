@@ -1,1 +1,1 @@
-"# Extrator_SPEDFiscal" 
+# Extrator_SPEDFiscal 
