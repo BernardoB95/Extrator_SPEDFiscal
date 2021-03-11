@@ -14,7 +14,7 @@ def load_factory(factory_name):
     """
 
     try:
-        factory_module = import_module('Core.' + factory_name, 'Core')
+        factory_module = import_module('Core.R' + factory_name + '_Factory', 'Core')
     except ImportError:
         factory_module = import_module('Core.Null_Factory', 'Core')
 
