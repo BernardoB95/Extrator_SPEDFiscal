@@ -5,9 +5,9 @@ from Core import IFactory
 
 def load_factory(factory_name):
     """
-    The Factory Pattern loader will recieve the name of the factory to be instanciated.
+    The Factory Pattern loader will receive the name of the factory to be instantiated.
 
-    :param factory_name: Name of the factory to be instanciated
+    :param factory_name: Name of the factory to be instantiated
     :type factory_name: String
     :return: The factory to be instantiated
     :rtype: Class
