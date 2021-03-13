@@ -15,6 +15,7 @@ def load_factory(factory_name):
 
     try:
         block = factory_name[0]
+        string = 'Core.Block_' + block + '.R' + factory_name + '_Factory'
         factory_module = import_module('Core.Block_' + block + '.R' + factory_name + '_Factory', 'Core')
     except ImportError:
         factory_module = import_module('Core.Null_Factory', 'Core')
