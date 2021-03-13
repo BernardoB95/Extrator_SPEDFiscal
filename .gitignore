@@ -1,3 +1,4 @@
 # Files to be ignored
 
 .idea/
+.venv/

@@ -1,6 +1,8 @@
 # Imports
 from Utils import load_factory
 from Regs import NullReg
+from collections import defaultdict
+from pandas import DataFrame, Series
 
 
 class ProcessingEngine:
@@ -15,6 +17,7 @@ class ProcessingEngine:
         for name, file in self._files.items():
 
             self._file_id += 1
+            sped_dict = defaultdict(list)
 
             for line in file:
 
@@ -27,6 +30,9 @@ class ProcessingEngine:
 
                 if not isinstance(reg_obj, NullReg):
                     print(reg_obj.header)
+
+                    name_key = reg_obj.__class__.__name__
+                    sped_dict[name_key].append(reg_obj)
 
                 else:
                     reg_obj.reg = reg
