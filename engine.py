@@ -27,7 +27,6 @@ class ProcessingEngine:
 
                 if not isinstance(reg_obj, NullReg):
                     print(reg_obj.header)
-                    print('wait')
 
                 else:
                     reg_obj.reg = reg

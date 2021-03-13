@@ -1,8 +1,9 @@
 from Core.IFactory import IFactory
+from Regs.Block_0 import R0400
 
 
 class R0400Factory(IFactory):
 
-    def create_block_object(self):
-        # TODO Fill in the overridden method
-        pass
+    def create_block_object(self, line):
+        self.r0400 = _r0400 = R0400()
+        return _r0400

@@ -20,6 +20,5 @@ class R0000(IReg):
                         'IND_PERFIL',
                         'IND_ATIV']
 
-    def tell(self):
-        print('This is REG 0000')
+
 

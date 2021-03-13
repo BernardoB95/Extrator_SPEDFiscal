@@ -11,8 +11,5 @@ class NullReg(IReg):
     def reg(self, r):
         self._reg = r
 
-    def tell(self):
-        print('This is the Null class')
-
     def header(self):
         pass
