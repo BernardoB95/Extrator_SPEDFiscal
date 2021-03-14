@@ -1,5 +1,5 @@
 # Imports
-from Utils import load_factory
+from Utils import load_factory, reg_logger
 from Regs import NullReg
 from collections import defaultdict
 from pandas import DataFrame, Series
@@ -36,4 +36,4 @@ class ProcessingEngine:
 
                 else:
                     reg_obj.reg = reg
-                    print(reg_obj.reg)
+                    reg_logger(reg)
