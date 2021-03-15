@@ -36,4 +36,4 @@ class ProcessingEngine:
 
                 else:
                     reg_obj.reg = reg
-                    reg_logger(reg)
+                    reg_logger(reg, name)

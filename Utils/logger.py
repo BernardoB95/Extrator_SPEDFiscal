@@ -6,5 +6,5 @@ logging.basicConfig(filename='extrator.log',
                     format='%(asctime)s; %(message)s')
 
 
-def reg_logger(reg):
-    logging.warning('Registro nao configurado na ferramenta; REG{}'.format(reg))
+def reg_logger(reg, filename):
+    logging.warning('{0}; Registro nao configurado na ferramenta; REG{1}'.format(filename, reg))
