@@ -65,8 +65,11 @@ class ProcessingEngine:
                 del sped_dict[irreg_key]
 
             # Export
-            for k, v in sped_dict.items():
-                excel_output_name = "To Do Later.xlsx"
-                directory = os.path.join(DATA_DIR, excel_output_name)
-                with ExcelWriter(directory, mode='a') as writer:
-                    v.to_excel(writer, sheet_name=k)
+            excel_name = name.split('\\')[-1]
+            excel_output_name = excel_name.replace('.txt', '.xlsx')
+            output_directory = os.path.join(DATA_DIR, excel_output_name)
+
+            with ExcelWriter(output_directory) as writer:
+                for k, v in sped_dict.items():
+
+                    v.to_excel(writer, sheet_name=k, index=False)
