@@ -2,7 +2,9 @@
 from Utils import load_factory, reg_logger, reg_size_logger
 from Regs import NullReg
 from collections import defaultdict
-from pandas import DataFrame, Series
+from pandas import DataFrame, ExcelWriter
+from config import DATA_DIR
+import os
 
 
 class ProcessingEngine:
@@ -31,9 +33,6 @@ class ProcessingEngine:
                 reg_obj = reg_factory.create_block_object(line)
 
                 if not isinstance(reg_obj, NullReg):
-                    print(reg_obj.header)
-                    print(reg_obj.reg_list)
-
                     name_key = reg_obj.__class__.__name__
                     sped_dict[name_key].append(reg_obj)
 
@@ -53,10 +52,8 @@ class ProcessingEngine:
                     if len(header) != len(reg_lst[0]):
                         raise Exception("Tamanho de arrays diferente no registro {}".format(reg))
 
-                    reg_df = DataFrame(reg_lst)
+                    reg_df = DataFrame(reg_lst, columns=header)
                     sped_dict[k] = reg_df
-
-                    # TODO export into excel by name and sheet
 
                 except Exception:
                     reg_size_logger(reg, name, len(header), len(reg_lst[0]))
@@ -66,3 +63,10 @@ class ProcessingEngine:
             # Delete irregular key, val
             for irreg_key in irregular_values:
                 del sped_dict[irreg_key]
+
+            # Export
+            for k, v in sped_dict.items():
+                excel_output_name = "To Do Later.xlsx"
+                directory = os.path.join(DATA_DIR, excel_output_name)
+                with ExcelWriter(directory, mode='a') as writer:
+                    v.to_excel(writer, sheet_name=k)
