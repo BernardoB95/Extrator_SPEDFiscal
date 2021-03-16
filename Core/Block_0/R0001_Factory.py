@@ -6,4 +6,5 @@ class R0001Factory(IFactory):
 
     def create_block_object(self, line):
         self.r0001 = _r0001 = R0001()
+        _r0001.reg_list = line
         return  _r0001
