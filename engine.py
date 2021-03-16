@@ -41,23 +41,28 @@ class ProcessingEngine:
                     reg_obj.reg = reg
                     reg_logger(reg, name)
 
-            # TODO overwrite list to pandas DF
+            irregular_values = list()
 
             for k, v in sped_dict.items():
 
                 header = v[0].header
                 reg_lst = [obj.reg_list for obj in v]
+                reg = reg_lst[0][0]
 
                 try:
-                    reg = reg_lst[0][0]
                     if len(header) != len(reg_lst[0]):
-                        raise Exception("Tamanho de arrays diferente no registro {}".format(reg_lst[0][0]))
+                        raise Exception("Tamanho de arrays diferente no registro {}".format(reg))
 
                     reg_df = DataFrame(reg_lst)
-                    print(header)
-                    print(reg_df)
+                    sped_dict[k] = reg_df
 
-                except:
+                    # TODO export into excel by name and sheet
+
+                except Exception:
                     reg_size_logger(reg, name, len(header), len(reg_lst[0]))
-                    sped_dict.pop(k)
+                    irregular_values.append(k)
                     continue
+
+            # Delete irregular key, val
+            for irreg_key in irregular_values:
+                del sped_dict[irreg_key]
