@@ -3,3 +3,5 @@
 .idea/
 .venv/
 .SPED_Elegancia/
+.venv/
+.__pycache__/
