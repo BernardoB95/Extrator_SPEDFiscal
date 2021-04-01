@@ -15,12 +15,12 @@ class RE310(IReg):
                         'VL_DEDUCOES_DIFAL',
                         'VL_RECOL_DIFAL',
                         'VL_SLD_CRED_TRANSPORTAR_DIFAL',
-                        'DEB_ESP_DIFAL'
+                        'DEB_ESP_DIFAL',
                         'VL_SLD_CRED_ANT_FCP',
                         'VL_TOT_DEB_FCP',
                         'VL_OUT_DEB_FCP',
                         'VL_TOT_CRED_FCP',
-                        'VL_OUT_CRED_FCP'
+                        'VL_OUT_CRED_FCP',
                         'VL_SLD_DEV_ANT_FCP',
                         'VL_DEDUCOES_FCP',
                         'VL_RECOL_FCP',
