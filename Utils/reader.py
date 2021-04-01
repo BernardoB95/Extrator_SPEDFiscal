@@ -25,7 +25,7 @@ class Reader:
         for file in self._file_names:
             file_list = []
 
-            with open(file, 'r') as sped:
+            with open(file, 'r', encoding='mbcs') as sped:
                 file_list = sped.read().splitlines()
 
             self._file_dict[file] = file_list
