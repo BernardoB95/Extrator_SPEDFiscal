@@ -2,16 +2,19 @@
 import Utils
 import config
 from engine import ProcessingEngine
+from Utils import scrapper
 
-args = Utils.ArgsParser()
+
+parser = Utils.ArgsParser(scrapper())
+args = parser.args
 
 # SPED Reader
-file_reader = Utils.Reader(config.DATA_DIR)
+file_reader = Utils.Reader(args.input_dir)
 files = file_reader.ReadFiles()
 
 # Separador
 
-engine = ProcessingEngine(files)
+engine = ProcessingEngine(files, args)
 engine.main()
 
 

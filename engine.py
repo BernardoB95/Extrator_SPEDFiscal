@@ -3,15 +3,16 @@ from Utils import load_factory, reg_logger, reg_size_logger
 from Regs import NullReg
 from collections import defaultdict
 from pandas import DataFrame, ExcelWriter
-from config import DATA_DIR
 import os
 
 
 class ProcessingEngine:
 
-    def __init__(self, files):
+    def __init__(self, files, args):
         self._files = files
         self._file_id = 0
+        self.output_dir = args.output_dir
+
 
     def main(self):
         """
@@ -67,7 +68,7 @@ class ProcessingEngine:
             # Export
             excel_name = name.split('\\')[-1]
             excel_output_name = excel_name.replace('.txt', '.xlsx')
-            output_directory = os.path.join(DATA_DIR, excel_output_name)
+            output_directory = os.path.join(self.output_dir, excel_output_name)
 
             with ExcelWriter(output_directory) as writer:
                 for k, v in sped_dict.items():
