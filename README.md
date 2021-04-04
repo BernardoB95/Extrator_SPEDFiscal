@@ -45,8 +45,12 @@ Para reportar os erros a serem corrigidos em proximos *releases*, é necessario 
 ## Colaborações & Pull Requests
 Para realizar colaborações, por favor, seguir a seguinte convenção:
  - Clonar a branch **stable**.
+ - Instalar as dependencias do arquivo ***requirements.txt*.
  - Escolher **um único** item para trabalhar por vez.
  - Realizar o **Pull Request** para a branch **stable**
    - Para correções de *bugs* existentes, nomear "Issue - \<Nome do PR\>" e referenciar o id do *issue*.
    - Para melhorias no codigo, nomear "Feature - \<Nome do PR\>".
  - Mandar o PR para revisão.
+
+## Estrutura das pastas
+
