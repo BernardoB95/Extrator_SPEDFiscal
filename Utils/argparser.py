@@ -31,6 +31,7 @@ class ArgsParser:
                              type=str,
                              metavar='',
                              choices=self.choices,
+                             default=self.choices,
                              nargs='+',
                              help='Specify the Regs to be exported separated by spaces, as in the following example: '
                                   '0001 0150 0200 C100 C190. Default value will consider all regs identified per file.')

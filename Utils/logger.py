@@ -1,6 +1,12 @@
 import logging
+import os
+from Utils.argparser import ArgsParser
+from Utils.choice_scrapper import scrapper
 
-logging.basicConfig(filename='extrator.log',
+parser = ArgsParser(scrapper())
+args = parser.args
+
+logging.basicConfig(filename= os.path.join(args.output_dir, 'extrator.log'),
                     level=logging.WARNING,
                     filemode='w',
                     format='%(asctime)s; %(message)s')

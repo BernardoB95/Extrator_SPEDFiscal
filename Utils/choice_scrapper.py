@@ -10,6 +10,6 @@ def scrapper():
         for name in filenames:
 
             if not any(m in name for m in _matches):
-                _files.append(name.replace('.py', ''))
+                _files.append(name.replace('.py', '').replace('R', ''))
 
     return _files

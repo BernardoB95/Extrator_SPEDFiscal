@@ -12,6 +12,8 @@ class ProcessingEngine:
         self._files = files
         self._file_id = 0
         self.output_dir = args.output_dir
+        self.choices = args.regs
+        self.verbosity = args.verbose
 
 
     def main(self):
@@ -21,6 +23,9 @@ class ProcessingEngine:
 
         self._file_id = 0
         for name, file in self._files.items():
+
+            if self.verbosity:
+                print("Extracting values from file: {0}".format(name))
 
             self._file_id += 1
             sped_dict = defaultdict(list)
@@ -41,7 +46,13 @@ class ProcessingEngine:
                     reg_obj.reg = reg
                     reg_logger(reg, name)
 
+                    if self.verbosity:
+                        print("A REG read in the file was not recognized as a valid one. Please, check out the log")
+
             irregular_values = list()
+
+            if self.verbosity:
+                print("Grouping information by REGs...")
 
             for k, v in sped_dict.items():
 
@@ -53,12 +64,20 @@ class ProcessingEngine:
                     if len(header) != len(reg_lst[0]):
                         raise Exception("Tamanho de arrays diferente no registro {}".format(reg))
 
+                    # Delete non-selected REGs without going to log
+                    if not any('R'+r == k for r in self.choices):
+                        irregular_values.append(k)
+
                     reg_df = DataFrame(reg_lst, columns=header)
                     sped_dict[k] = reg_df
 
                 except Exception:
                     reg_size_logger(reg, name, len(header), len(reg_lst[0]))
                     irregular_values.append(k)
+
+                    if self.verbosity:
+                        print("A difference in REG size was found. Please, check out the log.")
+
                     continue
 
             # Delete irregular key, val
@@ -74,3 +93,6 @@ class ProcessingEngine:
                 for k, v in sped_dict.items():
 
                     v.to_excel(writer, sheet_name=k, index=False)
+
+            if self.verbosity:
+                print("File {0} exported into directory: {1}".format(excel_output_name, self.output_dir))
