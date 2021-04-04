@@ -26,10 +26,27 @@ TO BE FILLED
 ```
 
 ## Uso
+After installing show how to open command line and add flags
+
+Depois de rodar a ferramenta, o procesamento dos arquivos estará na pasta indicada pelo usuario (**Obs**: Caso não seja especificado, o resultado do processamento será encontrado na pasta XXXX\YYYY\ZZZZ.xlsx). Um arquivo de log sera criado como parte do output, indicando a existencia de algum erro ou aviso.
 
 ## TO DO
+- [ ] Desenvolver lógica de atrelhar os REGs.
+- [ ] Desenvolvimento de Interface Gráfica (GUI).
 
 ## Problemas / Issues
+Para reportar os erros a serem corrigidos em proximos *releases*, é necessario seguir os seguintes passos:
+- Conferir os problemas reportados anteriormente, para evitar duplicação.
+- Usar o log ou o erro para descrever detalhadamente.
+- Se necesario, tirar print e anexar.
+- Enviar o *report*.
+
 
 ## Colaborações & Pull Requests
- 
+Para realizar colaborações, por favor, seguir a seguinte convenção:
+ - Clonar a branch **stable**.
+ - Escolher **um único** item para trabalhar por vez.
+ - Realizar o **Pull Request** para a branch **stable**
+   - Para correções de *bugs* existentes, nomear "Issue - \<Nome do PR\>" e referenciar o id do *issue*.
+   - Para melhorias no codigo, nomear "Feature - \<Nome do PR\>".
+ - Mandar o PR para revisão.
