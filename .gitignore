@@ -4,3 +4,5 @@
 .venv/
 .SPED_Elegancia/
 .__pycache__/
+.dist/
+.build/

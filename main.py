@@ -1,28 +1,30 @@
 # Imports
+import os
 import Utils
-import config
 from engine import ProcessingEngine
 from Utils import scrapper
 
 
-parser = Utils.ArgsParser(scrapper())
-args = parser.args
+if __name__ == "__main__":
 
-# SPED Reader
-if args.verbose:
-    print('Reading all .txt files from directory {}'.format(args.input_dir))
+    parser = Utils.ArgsParser(scrapper())
+    args = parser.args
 
-file_reader = Utils.Reader(args.input_dir)
-files = file_reader.ReadFiles()
+    # SPED Reader
+    if args.verbose:
+        print('Reading all .txt files from directory {}'.format(args.input_dir))
 
-# Separador
+    file_reader = Utils.Reader(args.input_dir)
+    files = file_reader.ReadFiles()
 
-engine = ProcessingEngine(files, args)
-engine.main()
+    # Separador
 
-if args.verbose:
-    print('Extraction completed.')
+    engine = ProcessingEngine(files, args)
+    engine.main()
 
-# TODO Complete README file (intention, how to use, args menu, architecture, release, collaborations and PRs)
+    if args.verbose:
+        print('Extraction completed.')
+        os.system("pause")
+
 # TODO Create executable and tag first release GitHub
 # TODO Create GUI
