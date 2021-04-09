@@ -1,11 +1,12 @@
 from os import walk
+import config as cf
 
 
 def scrapper():
     _files = []
     _matches = ['cpython', '__', 'Reg']
 
-    for (dirpath, dirnames, filenames) in walk(r"C:\MyDevProjects\Extrator SPED Fiscal\Regs"):
+    for (dirpath, dirnames, filenames) in walk(cf.REGS_DIR):
 
         for name in filenames:
 
