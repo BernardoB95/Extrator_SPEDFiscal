@@ -21,3 +21,5 @@ def reg_size_logger(reg, filename, num, num_error):
                                                                                             num,
                                                                                             num_error,
                                                                                             reg))
+def no_regs_identified_logger(filename):
+    logging.error('{0}; Regs nao identificados. Possivel problema de tamanho dos registros' .format(filename))

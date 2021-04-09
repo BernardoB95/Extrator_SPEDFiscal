@@ -1,5 +1,5 @@
 # Imports
-from Utils import load_factory, reg_logger, reg_size_logger
+from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger
 from Regs import NullReg
 from collections import defaultdict
 from pandas import DataFrame, ExcelWriter
@@ -89,10 +89,21 @@ class ProcessingEngine:
             excel_output_name = excel_name.replace('.txt', '.xlsx')
             output_directory = os.path.join(self.output_dir, excel_output_name)
 
-            with ExcelWriter(output_directory) as writer:
-                for k, v in sped_dict.items():
+            try:
 
-                    v.to_excel(writer, sheet_name=k, index=False)
+                with ExcelWriter(output_directory) as writer:
+                    for k, v in sped_dict.items():
+
+                        v.to_excel(writer, sheet_name=k, index=False)
+
+            except IndexError:
+                # If empty dictionary due to irregularities, then Index Error will be caught
+                no_regs_identified_logger(name)
+
+                if self.verbosity:
+                    print("No Regs identified in one of the files, please check the log.")
+
+                continue
 
             if self.verbosity:
                 print("File {0} exported into directory: {1}".format(excel_output_name, self.output_dir))
