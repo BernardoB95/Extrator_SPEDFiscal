@@ -4,7 +4,7 @@
 
 
 ## Licença
-Esse projeto conta com uma licença para codigo aberto do [MIT](https://choosealicense.com/licenses/mit/). Para maiores informações, ler o arquivo LICENSE.md ou acessar o link.
+Esse projeto conta com uma licença para codigo aberto do [MIT](https://choosealicense.com/licenses/mit/). Para maiores informações, ler o arquivo [LICENSE.md](https://github.com/BernardoB95/Extrator_SPEDFiscal/blob/main/README.md) ou acessar o link.
 
 ## Instalação
 Para desenvolvedores, se tem git instalado no computador, inserir o seguinte comando no git bash ou shell da sua preferência:
@@ -19,7 +19,7 @@ Dentro da pasta, tem um arquivo executável (main.exe), clicar com botão direit
 
 
 ## Uso
-A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual devemos rodar ela por linha de comando. Para realizar isso, devemos seguir las siguientes instruções:
+A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual devemos rodar ela por linha de comando. Para realizar isso, devemos seguir as seguintes instruções:
 1. Abrir o File Explorer e ir na pasta do executável (main.exe) ou do atalho criado.
 2. Na barra superior de busca, digitar "cmd" e clicar Enter.
 3. Uma janela de linha de comando vai abrir no diretorio, alí deve digitar: `start main.exe <opções>`
@@ -30,7 +30,7 @@ A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual
 | :----: | :------: | ----------- |
 | -h | --help | show this help message and exit |
 | -i | --input_dir | Specify the directory where SPEDs are located between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
-| -o | --output_dir &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Specify the directory where the excel files will be saved between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
+| -o | --output_dir | Specify the directory where the excel files will be saved between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
 | -v | --verbose | Specify verbosity of the process. Default value is False. |
 | -r | --regs | Specify the Regs to be exported separated by spaces, as in the following example: 0001 0150 0200 C100 C190. Default value will consider all regs identified per file. |
 
