@@ -81,18 +81,18 @@ Esse segmento da documentação é especifico para os desenvolvedores que colabo
 
 ### Estrutura das pastas
 #### Core
-Contem o arquivo **IFactory.py**, que herda do modulo ABC e funciona igual uma interface. Todas as classes definidas nas pastas, são factories que implementam a classe IFactory e nos permitirão instanciar objetos dinamicamente.
+Contém o arquivo **IFactory.py**, que herda do modulo ABC e funciona igual uma interface. Todas as classes definidas nas pastas, são factories que implementam a classe IFactory e nos permitirão instanciar objetos dinamicamente.
 
 #### data
 É um diretorio auxiliar onde consta o manual de SPED Fiscal usado para desenvolver a ferramenta. Adicionalmente, será utilizado como diretorio padrão de leitura e escritura.
 
 #### Regs
-Contem o arquivo **IReg.py**, que herda do modulo ABC e funciona igual uma interface. Todas as classes definidas nas pastas, são factories que implementam a classe IReg e nos permitirão instanciar objetos dinamicamente.
+Contém o arquivo **IReg.py**, que herda do modulo ABC e funciona igual uma interface. Todas as classes definidas nas pastas, são factories que implementam a classe IReg e nos permitirão instanciar objetos dinamicamente.
 
 #### Utils
-Contem todos os arquivos auxiliares para o desenvolvimento da ferramenta.
+Contém todos os arquivos auxiliares para o desenvolvimento da ferramenta.
 
 ### Gerar Executável
 Para a geração do executável, o módulo **pyinstaller** é utilizado. Uma vez realizada as correções, na consola, é necessario executar o seguinte comando:<br>
 `pyinstaller --onefile main.spec`<br>
-Duas pastas serão criadas, **dist** a qual contem o executável e precisara ser colocado na pasta principal para ele encontrar todas as dependencias do programa, e **build**, que contem todos os arquivos referentes à geração do executável. As duas pastas podem ser eliminadas depois.
+Duas pastas serão criadas, **dist** a qual contem o executável e precisará ser colocado na pasta principal para ele encontrar todas as dependências do programa, e **build**, que contem todos os arquivos referentes à geração do executável. As duas pastas podem ser eliminadas depois.
