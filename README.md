@@ -26,13 +26,13 @@ A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual
 4. Esperar o programa terminar de rodar.
 
 #### Opções
-| Flag | Extended Flag | Description |
-| :----: | :------: | ----------- |
-| -h | --help | show this help message and exit |
-| -i | --input_dir | Specify the directory where SPEDs are located between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
-| -o | --output_dir | Specify the directory where the excel files will be saved between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
-| -v | --verbose | Specify verbosity of the process. Default value is False. |
-| -r | --regs | Specify the Regs to be exported separated by spaces, as in the following example: 0001 0150 0200 C100 C190. Default value will consider all regs identified per file. |
+| Flag | <div style="width:300px">Extended Flag</div> | Description |
+| :----: | :------: | --------------------- |
+| -h     | --help       | show this help message and exit |
+| -i     | --input_dir  | Specify the directory where SPEDs are located between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
+| -o     | --output_dir | Specify the directory where the excel files will be saved between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
+| -v     | --verbose    | Specify verbosity of the process. Default value is False. |
+| -r     | --regs       | Specify the Regs to be exported separated by spaces, as in the following example: 0001 0150 0200 C100 C190. Default value will consider all regs identified per file. |
 
 #### Exemplos
 Varias combinações de opções são possíveis.
