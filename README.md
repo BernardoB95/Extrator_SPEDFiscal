@@ -26,13 +26,13 @@ A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual
 4. Esperar o programa terminar de rodar.
 
 #### Opções
-| Flag | <div style="width:300px">Extended Flag</div> | Description |
-| :----: | :------: | --------------------- |
-| -h     | --help       | show this help message and exit |
-| -i     | --input_dir  | Specify the directory where SPEDs are located between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
-| -o     | --output_dir | Specify the directory where the excel files will be saved between quotation marks (""). Default value is in "Extrator SPED Fiscal/data". |
-| -v     | --verbose    | Specify verbosity of the process. Default value is False. |
-| -r     | --regs       | Specify the Regs to be exported separated by spaces, as in the following example: 0001 0150 0200 C100 C190. Default value will consider all regs identified per file. |
+| Flag   | Extended Flag | Description |
+| :----: | :-----------: | --------------------- |
+| -h     | --help        | show this help message and exit |
+| -i     | --input_dir   | Specify the directory where SPEDs are located between quotation marks ("").<br> Default value is in "Extrator SPED Fiscal/data". |
+| -o     | --output_dir  | Specify the directory where the excel files will be saved between quotation marks ("").<br> Default value is in "Extrator SPED Fiscal/data". |
+| -v     | --verbose     | Specify verbosity of the process. Default value is False. |
+| -r     | --regs        | Specify the Regs to be exported separated by spaces, as in the following example: 0001 0150 0200 C100 C190.<br> Default value will consider all regs identified per file. |
 
 #### Exemplos
 Varias combinações de opções são possíveis.
@@ -43,13 +43,13 @@ Para processar registros específicos:<br>
 `start main.exe -r 0000 0150 0200 C100 C170 C190`
 
 Para especificar o diretorio de leitura  dos arquivos:<br>
-`start main.exe -i diretorio/dos/arquivos`
+`start main.exe -i "diretorio/dos/arquivos"`
 
 Para especificar o diretorio de escritura dos arquivos:<br>
-`start main.exe -o diretorio/dos/arquivos`
+`start main.exe -o "diretorio/dos/arquivos"`
 
 Para especificar o diretorio de leitura e escritura dos arquivos:<br>
-`start main.exe -i diretorio/de/leitura  -o diretorio/de/escritura`
+`start main.exe -i "diretorio/de/leitura"  -o "diretorio/de/escritura"`
 
 Depois de rodar a ferramenta, o procesamento dos arquivos estará na pasta indicada pelo usuario (**Obs**: Caso não seja especificado, o resultado do processamento será encontrado na pasta diretorio/de/preferência/Extrator_SPEDFiscal/data). Um arquivo de log sera criado como parte do output, indicando a existencia de algum erro ou aviso.
 
@@ -76,6 +76,23 @@ Para realizar colaborações, por favor, seguir a seguinte convenção:
  - Mandar o PR para revisão.
 
 ## Para Desenvolvedores
+Esse segmento da documentação é especifico para os desenvolvedores que colaborarão com o projeto ou simplesmente clonarão e melhorarão para o uso interno nas empresas. O projeto conta com um [arquivo de requerimentos](https://github.com/BernardoB95/Extrator_SPEDFiscal/edit/main/requirements.txt) para o correto funcionamento da ferramenta. Para instalar, na consola inserir: <br>
+`pip  install -r requirements.txt`
 
 ### Estrutura das pastas
+#### Core
+Contem o arquivo **IFactory.py**, que herda do modulo ABC e funciona igual uma interface. Todas as classes definidas nas pastas, são factories que implementam a classe IFactory e nos permitirão instanciar objetos dinamicamente.
 
+#### data
+É um diretorio auxiliar onde consta o manual de SPED Fiscal usado para desenvolver a ferramenta. Adicionalmente, será utilizado como diretorio padrão de leitura e escritura.
+
+#### Regs
+Contem o arquivo **IReg.py**, que herda do modulo ABC e funciona igual uma interface. Todas as classes definidas nas pastas, são factories que implementam a classe IReg e nos permitirão instanciar objetos dinamicamente.
+
+#### Utils
+Contem todos os arquivos auxiliares para o desenvolvimento da ferramenta.
+
+### Gerar Executável
+Para a geração do executável, o módulo **pyinstaller** é utilizado. Uma vez realizada as correções, na consola, é necessario executar o seguinte comando:<br>
+`pyinstaller --onefile main.spec`<br>
+Duas pastas serão criadas, **dist** a qual contem o executável e precisara ser colocado na pasta principal para ele encontrar todas as dependencias do programa, e **build**, que contem todos os arquivos referentes à geração do executável. As duas pastas podem ser eliminadas depois.
