@@ -11,7 +11,7 @@ Esse projeto conta com uma licença para código aberto do [MIT](https://choosea
 
 Para baixar o aplicativo, basta ir para a parte dos [_releases_](https://github.com/BernardoB95/Extrator_SPEDFiscal/releases) ou clicar no link. Uma vez na área mencionada, localizar a última versão e finalmente, abrir as opções para baixar o arquivo **ESF.exe**.
 
-Ao momento de instalar o aplicativo, o instalador pedira para inserir o diretório onde será salva a ferramenta. **Importante**: Lembrar do caminho onde foi salva, será usado depois.
+No momento de instalar o aplicativo, o instalador pedirá para inserir o diretório onde será salva a ferramenta. **Importante**: Lembrar do caminho onde foi salva, será usado depois.
 
 Quando a ferramenta estiver instalada, acessar a pasta da instalação, e opcionalmente, criar um atalho do arquivo **main.exe** clicando com botão direito no arquivo e selecionando a opção de criar atalho.
 Um atalho será criado na pasta, o mesmo poderá ser movido para outra localização como a Área de Trabalho e o nome poderá ser trocado também.
@@ -22,7 +22,7 @@ Um atalho será criado na pasta, o mesmo poderá ser movido para outra localiza�
 A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual devemos rodar ela por linha de comando. Para realizar isso, devemos seguir as seguintes instruções:
 1. Abrir o File Explorer e ir na pasta do executável (**main.exe**) ou do atalho criado.
 2. Na barra superior de busca, digitar "cmd" e clicar Enter.
-3. Uma janela de linha de comando vai abrir no diretório, alí deve digitar: `start main.exe <opções>` se for executar diretamente na pasta do projeto. Caso seja na localizaçao do atalho o comando será: `start <nome_do_arquivo>.lnk <opções>`
+3. Uma janela de linha de comando vai abrir no diretório, alí deve digitar: `start main.exe <opções>` se for executar diretamente na pasta do projeto. Caso seja na localizaçao do atalho o comando será: `start <nome_do_atalho>.lnk <opções>`
 4. Esperar o programa terminar de rodar.
 
 #### Opções
