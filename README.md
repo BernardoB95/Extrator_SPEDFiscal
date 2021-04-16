@@ -16,7 +16,7 @@ No momento de instalar o aplicativo, o instalador pedirá para inserir o diretó
 Quando a ferramenta estiver instalada, acessar a pasta da instalação, e opcionalmente, criar um atalho do arquivo **main.exe** clicando com botão direito no arquivo e selecionando a opção de criar atalho.
 Um atalho será criado na pasta, o mesmo poderá ser movido para outra localização como a Área de Trabalho e o nome poderá ser trocado também.
 
-
+**OBS**: Talvez, no momento da instalação, o Windows Defender levante uma alerta. Para continuar, clicar em "Mais informações > Executar".
 
 ## Uso
 A ferramenta ainda não conta com uma interface gráfica (GUI), motivo pelo qual devemos rodar ela por linha de comando. Para realizar isso, devemos seguir as seguintes instruções:
@@ -52,6 +52,12 @@ Para especificar o diretorio de leitura e escritura dos arquivos:<br>
 `start main.exe -i "diretorio/de/leitura"  -o "diretorio/de/escritura"`
 
 Depois de rodar a ferramenta, o procesamento dos arquivos estará na pasta indicada pelo usuario (**Obs**: Caso não seja especificado, o resultado do processamento será encontrado na pasta diretorio/de/preferência/Extrator_SPEDFiscal/data). Um arquivo de log sera criado como parte do output, indicando a existencia de algum erro ou aviso.
+
+### Dicas
+- Analisar diretamente no Excel com Pivot Tables e VLOOKUP.
+- Importar arquivos para um Banco de Dados e realizar análises.
+- Ler os arquivos em Alteryx para realizar Análises Exploratoria de Dados(EDA).
+- Importar arquivos em ferramenta de visualização de dados como: Power BI, Tableu, Qlik.
 
 ## TO DO
 - [ ] Desenvolver lógica de atrelhar os REGs.
