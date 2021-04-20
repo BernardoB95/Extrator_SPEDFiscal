@@ -8,3 +8,5 @@ class R1600(IReg):
                         'COD_PART',
                         'TOT_CREDITO',
                         'TOT_DEBITO']
+
+        self._hierarchy = "2"

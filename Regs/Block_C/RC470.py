@@ -15,3 +15,5 @@ class RC470(IReg):
                         'ALIQ_ICMS',
                         'VL_PIS',
                         'VL_COFINS']
+
+        self._hierarchy = "5"

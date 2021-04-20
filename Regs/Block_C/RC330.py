@@ -18,3 +18,5 @@ class RC330(IReg):
                         'VL_UNIT_FCP_ST_CONV_REST',
                         'VL_UNIT-ICMS-ST_CONV_COMPL',
                         'VL_UNIT_FCP_ST_CONV_COMPL']
+
+        self._hierarchy = "5"

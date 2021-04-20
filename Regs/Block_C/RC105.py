@@ -7,3 +7,5 @@ class RC105(IReg):
         self._header = ['REG',
                         'OPER',
                         'UF']
+
+        self._hierarchy = "3"

@@ -15,3 +15,5 @@ class RC690(IReg):
                         'VL_BC_ICMS_ST',
                         'VL_ICMS_ST',
                         'COD_OBS']
+
+        self._hierarchy = "3"

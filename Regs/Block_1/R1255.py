@@ -11,3 +11,5 @@ class R1255(IReg):
                         'VL_FCP_ST_RES_MOT',
                         'VL_ICMS_ST_COMPL_MOT',
                         'VL_FCP_ST_COMPL_MOT']
+
+        self._hierarchy = "3"

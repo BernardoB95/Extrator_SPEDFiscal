@@ -7,3 +7,5 @@ class R0220(IReg):
         self._header = ['REG',
                         'UNID_CONV',
                         'FET_CONV']
+
+        self._hierarchy = "3"

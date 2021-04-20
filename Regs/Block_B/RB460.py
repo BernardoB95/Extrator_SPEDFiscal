@@ -12,3 +12,5 @@ class RB460(IReg):
                         'PROC',
                         'COD_INF_OBS',
                         'IND_OBR']
+
+        self._hierarchy = "2"

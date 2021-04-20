@@ -33,3 +33,5 @@ class RC100(IReg):
                         'VL_COFINS',
                         'VL_PIS_ST',
                         'VL_COFINS_ST']
+
+        self._hierarchy = "2"

@@ -24,3 +24,5 @@ class RD300(IReg):
                         'VL_RED_BC'
                         'COD_OBS',
                         'COD_CTA']
+
+        self._hierarchy = "2"

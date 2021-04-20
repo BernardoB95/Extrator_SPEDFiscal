@@ -7,3 +7,5 @@ class RC171(IReg):
         self._header = ['REG',
                         'NUM_TANQUE',
                         'QTDE']
+
+        self._hierarchy = "4"

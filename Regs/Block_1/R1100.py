@@ -16,3 +16,5 @@ class R1100(IReg):
                         'DT_AVB',
                         'TP_CHC',
                         'PAIS']
+
+        self._hierarchy = "2"

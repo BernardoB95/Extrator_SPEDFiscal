@@ -10,3 +10,5 @@ class RB440(IReg):
                         'VL_CONT_RT',
                         'VL_BC_ISS_RT',
                         'VL_ISS_RT']
+
+        self._hierarchy = "2"

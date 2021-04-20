@@ -10,3 +10,5 @@ class RC860(IReg):
                         'DT_DOC',
                         'DOC_INI',
                         'DOC_FIM']
+
+        self._hierarchy = "2"

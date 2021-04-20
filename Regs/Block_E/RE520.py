@@ -12,3 +12,5 @@ class RE520(IReg):
                         'VL_OC_IPI',
                         'VL_SC_IPI',
                         'VL_SD_IPI']
+
+        self._hierarchy = "3"

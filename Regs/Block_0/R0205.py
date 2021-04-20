@@ -9,3 +9,5 @@ class R0205(IReg):
                         'DT_INI',
                         'DT_FIM',
                         'COD_ANT_ITEM']
+
+        self._hierarchy = "3"

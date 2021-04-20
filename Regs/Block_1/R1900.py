@@ -7,3 +7,5 @@ class R1900(IReg):
         self._header = ['REG',
                         'IND_APUR_ICMS',
                         'DESCR_COMPL_OUT_APUR']
+
+        self._hierarchy = "2"

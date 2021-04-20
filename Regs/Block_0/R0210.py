@@ -8,3 +8,5 @@ class R0210(IReg):
                         'COD_ITEM_COMP',
                         'QTD_COMP',
                         'PERDA']
+
+        self._hierarchy = "3"

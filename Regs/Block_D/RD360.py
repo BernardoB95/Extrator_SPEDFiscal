@@ -7,3 +7,5 @@ class RD360(IReg):
         self._header = ['REG',
                         'VL_PIS',
                         'VL_COFINS']
+
+        self._hierarchy = "4"

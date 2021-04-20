@@ -16,3 +16,5 @@ class RC190(IReg):
                         'VL_RED_BC',
                         'VL_IPI',
                         'COD_OBS']
+
+        self._hierarchy = "3"

@@ -15,3 +15,5 @@ class RC180(IReg):
                         'VL_UNIT_FCP_ST_CONV',
                         'COD_DA',
                         'NUM_DA']
+
+        self._hierarchy = "4"

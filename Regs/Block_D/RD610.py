@@ -22,3 +22,5 @@ class RD610(IReg):
                         'VL_PIS',
                         'VL_COFINS',
                         'COD_CTA']
+
+        self._hierarchy = "3"

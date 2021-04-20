@@ -12,3 +12,5 @@ class RC130(IReg):
                         'VL_IRRF',
                         'VL_BC_PREV',
                         'VL_PREV']
+
+        self._hierarchy = "3"

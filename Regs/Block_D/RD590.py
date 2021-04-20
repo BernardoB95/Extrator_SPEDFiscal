@@ -15,3 +15,5 @@ class RD590(IReg):
                         'VL_ICMS_UF',
                         'VL_RED_BC',
                         'COD_OBS']
+
+        self._hierarchy = "3"

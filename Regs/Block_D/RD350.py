@@ -9,3 +9,5 @@ class RD350(IReg):
                         'ECF_MOD',
                         'ECF_FAB',
                         'ECF_FX']
+
+        self._hierarchy = "2"

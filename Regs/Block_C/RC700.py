@@ -13,3 +13,5 @@ class RC700(IReg):
                         'DT_DOC_FIN',
                         'NOM_MEST',
                         'CHV_COD_DIG']
+
+        self._hierarchy = "2"

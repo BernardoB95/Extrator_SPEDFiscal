@@ -10,3 +10,5 @@ class RC120(IReg):
                         'PIS_IMP',
                         'COFINS_IMP',
                         'NUM_ACDRAW']
+
+        self._hierarchy = "3"

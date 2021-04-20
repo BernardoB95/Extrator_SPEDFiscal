@@ -14,3 +14,5 @@ class R1800(IReg):
                         'VL_ICMS_APUR',
                         'VL_BC_ICMS_APUR',
                         'VL_DIF']
+
+        self._hierarchy = "2"

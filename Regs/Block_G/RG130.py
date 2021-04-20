@@ -13,3 +13,5 @@ class RG130(IReg):
                         'CHV_NFE_CTE',
                         'DT_DOC',
                         'NUM_DA']
+
+        self._hierarchy = "4"

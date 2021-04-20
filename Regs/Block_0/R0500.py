@@ -11,3 +11,5 @@ class R0500(IReg):
                         'NIVEL',
                         'COD_CTA',
                         'NOME_CTA']
+
+        self._hierarchy = "2"

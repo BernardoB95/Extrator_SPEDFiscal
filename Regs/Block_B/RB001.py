@@ -6,3 +6,5 @@ class RB001(IReg):
     def __init__(self):
         self._header = ['REG',
                         'IN_DAD']
+
+        self._hierarchy = "1"

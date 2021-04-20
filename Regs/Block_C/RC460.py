@@ -14,3 +14,5 @@ class RC460(IReg):
                         'VL_COFINS',
                         'CPF_CNPJ',
                         'NOM_ADQ']
+
+        self._hierarchy = "4"

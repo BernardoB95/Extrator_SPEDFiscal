@@ -18,3 +18,5 @@ class RD130(IReg):
                         'VL_OUT',
                         'VL_FRT',
                         'UF_ID']
+
+        self._hierarchy = "3"

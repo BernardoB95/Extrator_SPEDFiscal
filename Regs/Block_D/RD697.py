@@ -8,3 +8,5 @@ class RD697(IReg):
                         'UF',
                         'VL_BC_ICMS',
                         'VL_ICMS']
+
+        self._hierarchy = "4"

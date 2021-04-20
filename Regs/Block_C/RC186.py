@@ -23,3 +23,5 @@ class RC186(IReg):
                         'VL_UNIT_BC_ICMS_ST_CONV_ENTRADA',
                         'VL_UNIT_ICMS_ST_CONV_ENTRADA',
                         'VL_UNIT_FCP_ST_CONV_ENTRADA']
+
+        self._hierarchy = "3"

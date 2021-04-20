@@ -11,3 +11,5 @@ class RK260(IReg):
                         'QTD_SAIDA',
                         'DT_RET',
                         'QTD_RET']
+
+        self._hierarchy = "3"

@@ -12,3 +12,5 @@ class RC810(IReg):
                         'VL_ITEM',
                         'CST_ICMS',
                         'CFOP']
+
+        self._hierarchy = "3"

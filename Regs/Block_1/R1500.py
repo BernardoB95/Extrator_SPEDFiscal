@@ -31,3 +31,5 @@ class R1500(IReg):
                         'VL_COFINS',
                         'TP_LIGACAO',
                         'COD_GRUPO_TENSAO']
+
+        self._hierarchy = "2"

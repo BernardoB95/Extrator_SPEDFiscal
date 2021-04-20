@@ -18,3 +18,5 @@ class R0100(IReg):
                         'FAX',
                         'EMAIL',
                         'COD_MUN']
+
+        self._hierarchy = "2"

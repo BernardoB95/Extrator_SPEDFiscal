@@ -11,3 +11,5 @@ class RD355(IReg):
                         'NUM_COO_FIN',
                         'GT_FIN',
                         'VL_BRT']
+
+        self._hierarchy = "3"

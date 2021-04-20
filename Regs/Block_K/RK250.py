@@ -8,3 +8,5 @@ class RK250(IReg):
                         'DT_PROD',
                         'COD_ITEM',
                         'QTD']
+
+        self._hierarchy = "3"

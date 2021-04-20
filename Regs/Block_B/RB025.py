@@ -11,3 +11,5 @@ class RB025(IReg):
                         'COD_MOD',
                         'COD_SIT',
                         'SER']
+
+        self._hierarchy = "3"

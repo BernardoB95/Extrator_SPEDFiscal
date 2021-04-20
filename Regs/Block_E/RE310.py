@@ -26,3 +26,5 @@ class RE310(IReg):
                         'VL_RECOL_FCP',
                         'VL_SLD_CRED_TRANSPORTAR_FCP',
                         'DEB_ESP_FCP']
+
+        self._hierarchy = "3"

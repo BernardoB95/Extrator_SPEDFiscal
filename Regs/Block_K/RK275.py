@@ -9,3 +9,5 @@ class RK275(IReg):
                         'QTD_COR_POS',
                         'QTD_COR_NEG',
                         'COD_INS_SUBST']
+
+        self._hierarchy = "4"

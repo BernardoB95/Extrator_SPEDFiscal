@@ -13,3 +13,5 @@ class R1110(IReg):
                         'NR_MEMO',
                         'QTD',
                         'UNID']
+
+        self._hierarchy = "4"

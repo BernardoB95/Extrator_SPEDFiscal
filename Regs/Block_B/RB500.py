@@ -8,3 +8,5 @@ class RB500(IReg):
                         'VL_REC',
                         'QTD_PROF',
                         'VL_OR']
+
+        self._hierarchy = "2"

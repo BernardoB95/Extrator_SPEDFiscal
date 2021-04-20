@@ -8,3 +8,5 @@ class RK290(IReg):
                         'DT_INI_OP',
                         'DT_FIN_AP',
                         'COD_DOC_OP']
+
+        self._hierarchy = "3"

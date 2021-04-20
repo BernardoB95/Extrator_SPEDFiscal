@@ -8,3 +8,5 @@ class RC178(IReg):
                         'CL_ENQ',
                         'VL_UNID',
                         'QUANT_PAD']
+
+        self._hierarchy = "4"

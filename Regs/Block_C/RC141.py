@@ -8,3 +8,5 @@ class RC141(IReg):
                         'NUM_PARC',
                         'DT_VCTO',
                         'VL_PARC']
+
+        self._hierarchy = "4"

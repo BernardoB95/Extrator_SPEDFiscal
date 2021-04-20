@@ -12,3 +12,5 @@ class RD160(IReg):
                         'CNPJ_CPF_DEST',
                         'IE_DEST',
                         'COD_MUN_DEST']
+
+        self._hierarchy = "3"

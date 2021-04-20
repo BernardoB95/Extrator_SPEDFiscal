@@ -10,3 +10,5 @@ class RC116(IReg):
                         'CHV_CFE',
                         'NUM_CFE',
                         'DT_DOC']
+
+        self._hierarchy = "4"

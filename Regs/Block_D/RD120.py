@@ -9,3 +9,5 @@ class RD120(IReg):
                         'COD_MUN_DEST',
                         'VEIC_ID',
                         'UF_ID']
+
+        self._hierarchy = "4"

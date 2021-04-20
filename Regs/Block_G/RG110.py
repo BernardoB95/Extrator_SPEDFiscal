@@ -14,3 +14,5 @@ class RG110(IReg):
                         'IND_PER_SAI',
                         'ICMS_APROP',
                         'SOM_ICMS_OC']
+
+        self._hierarchy = "2"

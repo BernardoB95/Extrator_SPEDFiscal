@@ -15,3 +15,5 @@ class R1320(IReg):
                         'VAL_ABERT',
                         'VOL_AFERI',
                         'VOL_VENDAS']
+
+        self._hierarchy = "4"

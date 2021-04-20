@@ -9,3 +9,5 @@ class RD365(IReg):
                         'VLR_ACUM_TOT',
                         'NR_TOT',
                         'DESCR_NR_TOT']
+
+        self._hierarchy = "4"
