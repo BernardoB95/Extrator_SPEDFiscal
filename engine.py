@@ -1,9 +1,10 @@
 # Imports
-from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger
+from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger, bind_id
 from Regs import NullReg
 from collections import defaultdict
 from pandas import DataFrame, ExcelWriter
 import os
+import xlsxwriter
 
 
 class ProcessingEngine:
@@ -28,15 +29,30 @@ class ProcessingEngine:
                 print("Extracting values from file: {0}".format(name))
 
             self._file_id += 1
+            BINDING_PRINT_ONCE = True
             sped_dict = defaultdict(list)
+            binding_list = []
 
-            for line in file:
+            for index, line in enumerate(file):
 
                 reg = line[1:5]
 
                 reg_factory = load_factory(reg)
 
                 reg_obj = reg_factory.create_block_object(line)
+
+                reg_obj.id = index
+
+                # TODO research possible builder usage to add id binding
+                if self.verbosity and BINDING_PRINT_ONCE:
+                    print("Applying binding rule to the REGs")
+                    BINDING_PRINT_ONCE = False
+
+                # if "20200801" in name:
+                #     print(index)
+
+                binding_list.append(reg_obj)
+                bind_id(binding_list, reg_obj, index)
 
                 if not isinstance(reg_obj, NullReg):
                     name_key = reg_obj.__class__.__name__
@@ -56,9 +72,17 @@ class ProcessingEngine:
 
             for k, v in sped_dict.items():
 
+                header_ids = ['FILE_ID', 'ID', 'ID_SUPER']
                 header = v[0].header
-                reg_lst = [obj.reg_list for obj in v]
-                reg = reg_lst[0][0]
+                header = header_ids + header
+
+                reg_lst = [] # [obj.reg_list for obj in v]
+                for obj in v:
+                    reg_lst_ids = [self._file_id, obj.id, obj.id_super]
+                    reg_line = reg_lst_ids + obj.reg_list
+                    reg_lst.append(reg_line)
+
+                reg = reg_lst[0][3]
 
                 try:
                     if len(header) != len(reg_lst[0]):
@@ -94,7 +118,7 @@ class ProcessingEngine:
                 with ExcelWriter(output_directory) as writer:
                     for k, v in sped_dict.items():
 
-                        v.to_excel(writer, sheet_name=k, index=False)
+                        v.to_excel(writer, sheet_name=k, index=False, encoding='mbcs', engine='xlsxwriter')
 
             except IndexError:
                 # If empty dictionary due to irregularities, then Index Error will be caught
