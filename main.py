@@ -26,5 +26,5 @@ if __name__ == "__main__":
         print('Extraction completed.')
         os.system("pause")
 
-# TODO Create executable and tag first release GitHub
+
 # TODO Create GUI
