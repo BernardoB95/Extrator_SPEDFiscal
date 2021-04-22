@@ -1,20 +1,20 @@
 # Imports
-from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger, bind_id
+from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger, bind_id, Reader
 from Regs import NullReg
 from collections import defaultdict
 from pandas import DataFrame, ExcelWriter
 import os
-import xlsxwriter
 
 
 class ProcessingEngine:
 
-    def __init__(self, files, args):
-        self._files = files
+    def __init__(self, args):
+        # self._files = files
         self._file_id = 0
         self.output_dir = args.output_dir
         self.choices = args.regs
         self.verbosity = args.verbose
+        self.input_dir = args.input_dir
 
 
     def main(self):
@@ -22,8 +22,14 @@ class ProcessingEngine:
         This is the real main function embedded in an engine that will orchestrate the app.
         """
 
+        file_reader = Reader(self.input_dir)
+        file_generator = file_reader.ReadFilesGenerator()
+
+        if self.verbose:
+            print('Reading all .txt files from directory {}'.format(self.input_dir))
+
         self._file_id = 0
-        for name, file in self._files.items():
+        for name, file in file_generator:
 
             if self.verbosity:
                 print("Extracting values from file: {0}".format(name))
@@ -43,13 +49,9 @@ class ProcessingEngine:
 
                 reg_obj.id = index
 
-                # TODO research possible builder usage to add id binding
                 if self.verbosity and BINDING_PRINT_ONCE:
                     print("Applying binding rule to the REGs")
                     BINDING_PRINT_ONCE = False
-
-                # if "20200801" in name:
-                #     print(index)
 
                 binding_list.append(reg_obj)
                 bind_id(binding_list, reg_obj, index)

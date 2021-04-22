@@ -3,27 +3,27 @@ import os
 import Utils
 from engine import ProcessingEngine
 from Utils import scrapper
+from datetime import datetime
 
 
 if __name__ == "__main__":
 
+    start = datetime.now()
+
     parser = Utils.ArgsParser(scrapper())
     args = parser.args
 
-    # SPED Reader
-    if args.verbose:
-        print('Reading all .txt files from directory {}'.format(args.input_dir))
-
-    file_reader = Utils.Reader(args.input_dir)
-    files = file_reader.ReadFiles()
-
-    # Separador
-
-    engine = ProcessingEngine(files, args)
+    engine = ProcessingEngine(args)
     engine.main()
 
+    end = datetime.now()
+
     if args.verbose:
+        exec_time = (end - start).seconds
+        minutes = exec_time // 60
+        seconds = exec_time - (minutes * 60)
         print('Extraction completed.')
+        print('Process completed in {0}:{1}'.format(minutes, seconds))
         os.system("pause")
 
 
