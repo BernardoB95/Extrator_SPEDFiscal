@@ -1,5 +1,5 @@
 # Imports
-from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger, bind_id, Reader
+from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger, Reader, Binder
 from Regs import NullReg
 from collections import defaultdict
 from pandas import DataFrame, ExcelWriter
@@ -25,7 +25,7 @@ class ProcessingEngine:
         file_reader = Reader(self.input_dir)
         file_generator = file_reader.ReadFilesGenerator()
 
-        if self.verbose:
+        if self.verbosity:
             print('Reading all .txt files from directory {}'.format(self.input_dir))
 
         self._file_id = 0
@@ -37,7 +37,7 @@ class ProcessingEngine:
             self._file_id += 1
             BINDING_PRINT_ONCE = True
             sped_dict = defaultdict(list)
-            binding_list = []
+            reg_binder = Binder()
 
             for index, line in enumerate(file):
 
@@ -53,8 +53,7 @@ class ProcessingEngine:
                     print("Applying binding rule to the REGs")
                     BINDING_PRINT_ONCE = False
 
-                binding_list.append(reg_obj)
-                bind_id(binding_list, reg_obj, index)
+                reg_binder.bind_id(reg_obj)
 
                 if not isinstance(reg_obj, NullReg):
                     name_key = reg_obj.__class__.__name__

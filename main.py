@@ -23,7 +23,7 @@ if __name__ == "__main__":
         minutes = exec_time // 60
         seconds = exec_time - (minutes * 60)
         print('Extraction completed.')
-        print('Process completed in {0}:{1}'.format(minutes, seconds))
+        print('Process completed in {0}:{1:02d}'.format(minutes, seconds))
         os.system("pause")
 
 
