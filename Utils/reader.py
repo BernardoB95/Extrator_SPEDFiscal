@@ -11,28 +11,6 @@ class Reader:
             if file.endswith('.txt'):
                 self._file_names.append(os.path.join(self._path, file))
 
-    def ReadFiles(self):
-        """
-        This method creates a key, value pair in a dictionary for each file retrieved in the
-        directory.
-
-        :return: _file_dict
-        :rtype: Dict{string: List}
-        """
-
-        for file in self._file_names:
-            file_list = []
-
-            with open(file, 'r', encoding='mbcs') as sped:
-                file_list = sped.read().splitlines()
-
-            if not self.isSigned(file_list):
-                file_list = self.stripSignature(file_list)
-
-            self._file_dict[file] = file_list
-
-        # TODO restructure the function to support yield
-        return self._file_dict
 
     def ReadFilesGenerator(self):
         """
@@ -46,7 +24,7 @@ class Reader:
         for file in self._file_names:
             file_list = []
 
-            # TODO see if the problem is in here
+            # TODO see further into yielding one line at a time
             with open(file, 'r', encoding='mbcs') as sped:
                 file_list = sped.read().splitlines()
 

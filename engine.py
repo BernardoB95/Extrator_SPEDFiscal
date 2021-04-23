@@ -9,7 +9,6 @@ import os
 class ProcessingEngine:
 
     def __init__(self, args):
-        # self._files = files
         self._file_id = 0
         self.output_dir = args.output_dir
         self.choices = args.regs
@@ -77,7 +76,7 @@ class ProcessingEngine:
                 header = v[0].header
                 header = header_ids + header
 
-                reg_lst = [] # [obj.reg_list for obj in v]
+                reg_lst = []
                 for obj in v:
                     reg_lst_ids = [self._file_id, obj.id, obj.id_super]
                     reg_line = reg_lst_ids + obj.reg_list
