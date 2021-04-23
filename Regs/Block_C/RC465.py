@@ -7,3 +7,5 @@ class RC465(IReg):
         self._header = ['REG',
                         'CHV_CFE',
                         'NUM_CCF']
+
+        self._hierarchy = "5"

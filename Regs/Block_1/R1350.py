@@ -9,3 +9,5 @@ class R1350(IReg):
                         'FABRICANTE',
                         'MODELO',
                         'TIPO_MEDICAO']
+
+        self._hierarchy = "2"

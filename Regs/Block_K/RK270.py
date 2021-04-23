@@ -12,3 +12,5 @@ class RK270(IReg):
                         'QTD_COR_POS',
                         'QTD_COR_NEG',
                         'ORIGEM']
+
+        self._hierarchy = "3"

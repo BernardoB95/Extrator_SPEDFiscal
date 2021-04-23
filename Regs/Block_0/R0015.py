@@ -7,3 +7,5 @@ class R0015(IReg):
         self._header = ['REG',
                         'UF_ST',
                         'IE_ST']
+
+        self._hierarchy = "2"

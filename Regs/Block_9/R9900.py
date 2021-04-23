@@ -7,3 +7,5 @@ class R9900(IReg):
         self._header = ['REG',
                         'REG_BLC',
                         'QTD_REG_BLC']
+
+        self._hierarchy = "2"

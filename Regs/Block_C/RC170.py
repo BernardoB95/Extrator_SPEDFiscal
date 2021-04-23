@@ -42,3 +42,5 @@ class RC170(IReg):
                         'VL_COFINS',
                         'COD_CTA',
                         'VL_ABAT_NT']
+
+        self._hierarchy = "3"

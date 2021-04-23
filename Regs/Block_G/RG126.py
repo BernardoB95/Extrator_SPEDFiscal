@@ -13,3 +13,5 @@ class RG126(IReg):
                         'VL_TOTAL',
                         'IND_PER_SAI',
                         'IND_PARC_APROP']
+
+        self._hierarchy = "4"

@@ -14,3 +14,5 @@ class RC115(IReg):
                         'IE_ENTG',
                         'CPF_ENTG',
                         'COD_MUN_ENTG']
+
+        self._hierarchy = "4"

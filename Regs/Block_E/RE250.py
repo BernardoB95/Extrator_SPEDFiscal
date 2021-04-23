@@ -14,3 +14,5 @@ class RE250(IReg):
                         'PROC',
                         'TXT_COMPL',
                         'MES_REF']
+
+        self._hierarchy = "4"

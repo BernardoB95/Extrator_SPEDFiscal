@@ -7,3 +7,5 @@ class R0450(IReg):
         self._header = ['REG',
                         'COD_INF',
                         'TXT']
+
+        self._hierarchy = "2"

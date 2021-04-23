@@ -14,3 +14,5 @@ class RE313(IReg): # FAZER
                         'DT_DOC',
                         'COD_ITEM',
                         'VL_AJ_ITEM']
+
+        self._hierarchy = "5"

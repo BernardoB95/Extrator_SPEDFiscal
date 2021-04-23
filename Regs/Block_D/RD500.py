@@ -28,3 +28,5 @@ class RD500(IReg):
                         'VL_COFINS',
                         'COD_CTA',
                         'TP_ASSINANTE']
+
+        self._hierarchy = "2"

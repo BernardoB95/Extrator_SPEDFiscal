@@ -7,3 +7,5 @@ class RC111(IReg):
         self._header = ['REG',
                         'NUM_PROC',
                         'IND_PROC']
+
+        self._hierarchy = "4"

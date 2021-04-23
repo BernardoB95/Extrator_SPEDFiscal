@@ -9,3 +9,5 @@ class RC400(IReg):
                         'ECF_MOD',
                         'ECF_FAB',
                         'ECF_CX']
+
+        self._hierarchy = "2"

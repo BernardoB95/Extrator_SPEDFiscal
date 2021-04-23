@@ -13,3 +13,5 @@ class RD695(IReg):
                         'DT_DOC_FIN',
                         'NOM_MEST',
                         'CHV_COD_DIG']
+
+        self._hierarchy = "2"

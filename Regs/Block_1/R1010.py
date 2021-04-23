@@ -18,3 +18,5 @@ class R1010(IReg):
                         'IND_GIAF3',
                         'IND_GIAF4',
                         'IND_REST_RESSARC_COMPL_ICMS']
+
+        self._hierarchy = "2"

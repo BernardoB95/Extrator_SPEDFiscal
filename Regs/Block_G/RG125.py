@@ -14,3 +14,5 @@ class RG125(IReg):
                         'VL_IMOB_ICMS_DIF',
                         'NUM_PARC',
                         'VL_PARC_PASS']
+
+        self._hierarchy = "3"

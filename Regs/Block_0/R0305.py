@@ -8,3 +8,5 @@ class R0305(IReg):
                         'COD_CCUS',
                         'FUNC',
                         'VIDA_UTIL']
+
+        self._hierarchy = "3"

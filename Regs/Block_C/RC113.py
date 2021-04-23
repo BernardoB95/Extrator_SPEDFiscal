@@ -14,3 +14,5 @@ class RC113(IReg):
                         'NUM_DOC',
                         'DT_DOC',
                         'CHV_DOCe']
+
+        self._hierarchy = "4"

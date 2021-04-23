@@ -10,3 +10,5 @@ class RK210(IReg):
                         'COD_DOC_OS',
                         'COD_ITEM_ORI',
                         'QTD_ORI']
+
+        self._hierarchy = "3"

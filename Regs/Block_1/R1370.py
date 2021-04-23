@@ -8,3 +8,5 @@ class R1370(IReg):
                         'NUM_BICO',
                         'COD_ITEM',
                         'NUM_TANQUE']
+
+        self._hierarchy = "3"

@@ -15,3 +15,5 @@ class RB350(IReg):
                         'ALIQ_ISS',
                         'VL_ISS',
                         'COD_INF_OBS']
+
+        self._hierarchy = "2"

@@ -11,3 +11,5 @@ class RK280(IReg):
                         'QTD_COR_NEG',
                         'IND_EST',
                         'COD_PART']
+
+        self._hierarchy = "3"

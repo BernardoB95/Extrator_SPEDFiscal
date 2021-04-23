@@ -8,3 +8,5 @@ class RH020(IReg):
                         'CST_ICMS',
                         'BC_ICMS',
                         'VL_ICMS']
+
+        self._hierarchy = "4"

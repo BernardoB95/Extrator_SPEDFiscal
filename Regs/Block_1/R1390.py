@@ -6,3 +6,5 @@ class R1390(IReg):
     def __init__(self):
         self._header = ['REG',
                         'COD_PROD']
+
+        self._hierarchy = "2"

@@ -8,3 +8,5 @@ class RK265(IReg):
                         'COD_ITEM',
                         'QTD_CONS',
                         'QTD_RET']
+
+        self._hierarchy = "4"

@@ -8,3 +8,5 @@ class RD101(IReg):
                         'VL_FCP_UF_DEST',
                         'VL_ICMS_UF_DEST',
                         'VL_ICMS_UF_REM']
+
+        self._hierarchy = "3"

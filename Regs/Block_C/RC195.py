@@ -7,3 +7,5 @@ class RC195(IReg):
         self._header = ['REG',
                         'COD_OBS',
                         'TXT_COMPL']
+
+        self._hierarchy = "3"

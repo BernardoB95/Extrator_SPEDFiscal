@@ -7,3 +7,5 @@ class RK291(IReg):
         self._header = ['REG',
                         'COD_ITEM',
                         'QTD']
+
+        self._hierarchy = "4"

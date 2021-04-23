@@ -11,3 +11,5 @@ class RC425(IReg):
                         'VL_ITEM',
                         'VL_PIS',
                         'VL_COFINS']
+
+        self._hierarchy = "5"

@@ -11,3 +11,5 @@ class R1105(IReg):
                         'CHV_NFE',
                         'DT_DOC',
                         'COD_ITEM']
+
+        self._hierarchy = "3"

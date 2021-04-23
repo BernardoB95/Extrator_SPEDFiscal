@@ -29,3 +29,5 @@ class RD100(IReg):
                         'COD_CTA',
                         'COD_MUN_ORIG',
                         'COD_MUN_DEST']
+
+        self._hierarchy = "2"

@@ -18,3 +18,5 @@ class RD140(IReg):
                         'VL_OUT',
                         'VL_FRT_BRT',
                         'VL_FRT_MM']
+
+        self._hierarchy = "3"

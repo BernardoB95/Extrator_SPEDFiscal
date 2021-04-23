@@ -8,3 +8,5 @@ class R0175(IReg):
                         'DT_ALT',
                         'NR_CAMPO',
                         'CONT_ANT']
+
+        self._hierarchy = "3"

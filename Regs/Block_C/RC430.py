@@ -20,3 +20,5 @@ class RC430(IReg):
                         'VL_UNIT_FCP_ST_CONV_COMPL',
                         'CST_ICMS',
                         'CFOP']
+
+        self._hierarchy = "6"

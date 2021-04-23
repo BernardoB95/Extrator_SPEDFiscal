@@ -9,3 +9,5 @@ class R1210(IReg):
                         'NR_DOC',
                         'VL_CRED_UTIL',
                         'CHV_DOCe']
+
+        self._hierarchy = "3"

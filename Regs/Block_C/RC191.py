@@ -8,3 +8,5 @@ class RC191(IReg):
                         'VL_FCP_OP',
                         'VL_FCP_ST',
                         'VL_FCP_RET']
+
+        self._hierarchy = "4"

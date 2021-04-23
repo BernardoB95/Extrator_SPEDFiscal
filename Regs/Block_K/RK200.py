@@ -10,3 +10,5 @@ class RK200(IReg):
                         'QTD',
                         'IND_EST',
                         'COD_PART']
+
+        self._hierarchy = "3"

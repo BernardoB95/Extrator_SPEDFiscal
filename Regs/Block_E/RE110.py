@@ -19,3 +19,5 @@ class RE110(IReg):
                         'VL_ICMS_RECOLHER',
                         'VL_SLD_CREDOR_TRANSPORTAR',
                         'DEB_ESP']
+
+        self._hierarchy = "3"

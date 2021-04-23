@@ -19,3 +19,5 @@ class RC495(IReg):
                         'VL_ISEN',
                         'VL_NT',
                         'VL_ICMS_ST']
+
+        self._hierarchy = "2"

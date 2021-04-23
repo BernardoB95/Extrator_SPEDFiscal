@@ -8,3 +8,5 @@ class R1925(IReg):
                         'COD_INF_ADIC',
                         'VL_INF_ADIC',
                         'DESCR_COMPL_AJ']
+
+        self._hierarchy = "5"

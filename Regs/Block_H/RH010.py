@@ -15,3 +15,5 @@ class RH010(IReg):
                         'TXT_COMPL',
                         'COD_CTA',
                         'VL_ITEM_IR']
+
+        self._hierarchy = "3"

@@ -20,3 +20,5 @@ class RC380(IReg):
                         'VL_UNIT_FCP_ST_CONV_COMPL',
                         'CST_ICMS',
                         'CFOP']
+
+        self._hierarchy = "4"

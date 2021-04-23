@@ -10,3 +10,5 @@ class RB510(IReg):
                         'IND_SOC',
                         'CPF',
                         'NOME']
+
+        self._hierarchy = "3"

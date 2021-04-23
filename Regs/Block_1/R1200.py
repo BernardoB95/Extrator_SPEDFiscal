@@ -11,3 +11,5 @@ class R1200(IReg):
                         'CRED_RECEB',
                         'CRED_UTIL',
                         'SLD_CRED_FIM']
+
+        self._hierarchy = "2"

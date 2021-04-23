@@ -10,3 +10,5 @@ class RE510(IReg):
                         'VL_CONT_IPI',
                         'VL_BC_IPI',
                         'VL_IPI']
+
+        self._hierarchy = "3"

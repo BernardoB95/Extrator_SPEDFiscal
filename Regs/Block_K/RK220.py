@@ -10,3 +10,5 @@ class RK220(IReg):
                         'COD_ITEM_DEST',
                         'QTDE_ORI',
                         'QTD_DEST']
+
+        self._hierarchy = "3"

@@ -7,3 +7,5 @@ class RE100(IReg):
         self._header = ['REG',
                         'DT_INI',
                         'DT_FIN']
+
+        self._hierarchy = "2"

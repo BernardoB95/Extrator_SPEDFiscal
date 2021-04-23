@@ -8,3 +8,5 @@ class RE200(IReg):
                         'UF',
                         'DT_INI',
                         'DT_FIN']
+
+        self._hierarchy = "2"

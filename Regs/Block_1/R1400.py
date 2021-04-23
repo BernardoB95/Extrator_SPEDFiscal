@@ -8,3 +8,5 @@ class R1400(IReg):
                         'COD_ITEM_IPM',
                         'MUN',
                         'VALOR']
+
+        self._hierarchy = "2"

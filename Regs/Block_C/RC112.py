@@ -12,3 +12,5 @@ class RC112(IReg):
                         'VL_DA',
                         'DT_VCTO',
                         'DT_PGTO']
+
+        self._hierarchy = "4"

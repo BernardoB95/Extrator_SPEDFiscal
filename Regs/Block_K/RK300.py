@@ -6,3 +6,5 @@ class RK300(IReg):
     def __init__(self):
         self._header = ['REG',
                         'DT_PROD']
+
+        self._hierarchy = "3"

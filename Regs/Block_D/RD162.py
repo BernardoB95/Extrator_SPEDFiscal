@@ -14,3 +14,5 @@ class RD162(IReg):
                         'QTD_VOL',
                         'PESO_BRT',
                         'PESO_LIQ']
+
+        self._hierarchy = "4"

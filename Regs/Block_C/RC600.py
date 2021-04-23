@@ -26,3 +26,5 @@ class RC600(IReg):
                         'VL_ICMS_ST',
                         'VL_PIS',
                         'VL_COFINS']
+
+        self._hierarchy = "2"

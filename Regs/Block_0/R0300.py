@@ -11,3 +11,5 @@ class R0300(IReg):
                         'COD_PRNC',
                         'COD_CTA',
                         'NR_PARC']
+
+        self._hierarchy = "2"

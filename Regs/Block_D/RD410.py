@@ -19,3 +19,5 @@ class RD410(IReg):
                         'VL_SERV',
                         'VL_BC_ICMS',
                         'VL_ICMS']
+
+        self._hierarchy = "3"

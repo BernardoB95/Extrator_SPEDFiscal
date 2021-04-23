@@ -37,3 +37,5 @@ class RC500(IReg):
                         'IND_DEST',
                         'COD_MUN_DEST',
                         'COD_CTA']
+
+        self._hierarchy = "2"
