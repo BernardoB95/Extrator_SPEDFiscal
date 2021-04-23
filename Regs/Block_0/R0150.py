@@ -17,3 +17,5 @@ class R0150(IReg):
                         'NUM',
                         'COMPL',
                         'BAIRRO']
+
+        self._hierarchy = "2"

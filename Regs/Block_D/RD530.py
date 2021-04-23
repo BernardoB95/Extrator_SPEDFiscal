@@ -11,3 +11,5 @@ class RD530(IReg):
                         'PER_FISCAL',
                         'COD_AREA',
                         'TERMINAL']
+
+        self._hierarchy = "3"

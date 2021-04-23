@@ -8,3 +8,5 @@ class RC791(IReg):
                         'UF',
                         'VL_BC_ICMS_ST',
                         'VL_ICMS_ST']
+
+        self._hierarchy = "4"

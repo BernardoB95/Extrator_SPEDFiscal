@@ -19,3 +19,5 @@ class RB470(IReg):
                         'VL_ISS_REC',
                         'VL_ISS_ST',
                         'VL_ISS_REC_UNI']
+
+        self._hierarchy = "2"

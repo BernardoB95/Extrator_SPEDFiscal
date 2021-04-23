@@ -10,3 +10,5 @@ class RD370(IReg):
                         'QTD_BILH',
                         'VL_BC_ICMS',
                         'VL_ICMS']
+
+        self._hierarchy = "5"

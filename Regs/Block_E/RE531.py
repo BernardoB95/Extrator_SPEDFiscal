@@ -14,3 +14,5 @@ class RE531(IReg):
                         'COD_ITEM',
                         'VL_AJ_ITEM',
                         'CHV_NFE']
+
+        self._hierarchy = "5"

@@ -8,3 +8,5 @@ class RE500(IReg):
                         'IND_APUR',
                         'DT_INI',
                         'DT_FIN']
+
+        self._hierarchy = "2"

@@ -11,3 +11,5 @@ class RC370(IReg):
                         'UNID',
                         'VL_ITEM',
                         'VL_DESC']
+
+        self._hierarchy = "3"

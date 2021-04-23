@@ -13,3 +13,5 @@ class RD190(IReg):
                         'VL_ICMS',
                         'VL_RED_BC',
                         'COD_OBS']
+
+        self._hierarchy = "3"

@@ -24,3 +24,5 @@ class R1391(IReg):
                         'COD_ITEM',
                         'TP_RESIDUO',
                         'QTD_RESIDUO']
+
+        self._hierarchy = "3"

@@ -9,3 +9,5 @@ class R1975(IReg):
                         'G3_10',
                         'G3_11',
                         'G3_12']
+
+        self._hierarchy = "3"

@@ -11,3 +11,5 @@ class RC160(IReg):
                         'PESO_BRT',
                         'PESO_LIQ',
                         'UF_ID']
+
+        self._hierarchy = "3"

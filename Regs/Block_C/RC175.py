@@ -9,3 +9,5 @@ class RC175(IReg):
                         'CNPJ',
                         'UF',
                         'CHASSI_VEIC']
+
+        self._hierarchy = "4"

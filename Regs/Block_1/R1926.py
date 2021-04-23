@@ -14,3 +14,5 @@ class R1926(IReg):
                         'PROC',
                         'TXT_COMPL',
                         'MES_REF']
+
+        self._hierarchy = "5"

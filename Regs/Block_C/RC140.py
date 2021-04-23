@@ -11,3 +11,5 @@ class RC140(IReg):
                         'NUM_TIT',
                         'QTD_PARC',
                         'VL_TIT']
+
+        self._hierarchy = "3"

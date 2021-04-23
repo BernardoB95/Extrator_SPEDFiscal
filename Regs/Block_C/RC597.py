@@ -12,3 +12,5 @@ class RC597(IReg):
                         'ALIQ_ICMS',
                         'VL_ICMS',
                         'VL_OUTROS']
+
+        self._hierarchy = "4"

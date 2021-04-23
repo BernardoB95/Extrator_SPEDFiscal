@@ -9,3 +9,5 @@ class RH030(IReg):
                         'VL_BC_ICMS_ST',
                         'VL_ICMS_ST',
                         'VL_FCP']
+
+        self._hierarchy = "4"

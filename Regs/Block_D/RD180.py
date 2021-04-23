@@ -21,3 +21,5 @@ class RD180(IReg):
                         'NUM_DOC',
                         'DT_DOC',
                         'VL_DOC']
+
+        self._hierarchy = "3"

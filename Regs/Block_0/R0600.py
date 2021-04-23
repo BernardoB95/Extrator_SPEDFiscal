@@ -8,3 +8,5 @@ class R0600(IReg):
                         'DT_ALT',
                         'COD_CCUS',
                         'CCUS']
+
+        self._hierarchy = "2"

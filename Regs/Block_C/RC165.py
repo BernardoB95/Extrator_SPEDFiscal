@@ -17,3 +17,5 @@ class RC165(IReg):
                         'NOM_MOT',
                         'CPF',
                         'UF_ID']
+
+        self._hierarchy = "3"

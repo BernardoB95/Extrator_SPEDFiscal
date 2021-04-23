@@ -13,3 +13,5 @@ class RG140(IReg):
                         'VL_ICMS_ST_APLICADO',
                         'VL_ICMS_FRT_APLICADO',
                         'VL_ICMS_DIF_APLICADO']
+
+        self._hierarchy = "5"

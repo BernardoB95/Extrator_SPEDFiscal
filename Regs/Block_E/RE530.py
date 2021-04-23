@@ -11,3 +11,5 @@ class RE530(IReg):
                         'IND_DOC',
                         'NUM_DOC',
                         'DESCR_AJ']
+
+        self._hierarchy = "4"

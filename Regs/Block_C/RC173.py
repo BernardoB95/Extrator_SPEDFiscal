@@ -12,3 +12,5 @@ class RC173(IReg):
                         'IND_MED',
                         'TP_PROD',
                         'VL_TAB_MAX']
+
+        self._hierarchy = "4"

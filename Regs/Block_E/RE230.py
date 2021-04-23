@@ -10,3 +10,5 @@ class RE230(IReg):
                         'IND_PROC',
                         'PROC',
                         'TXT_COMPL']
+
+        self._hierarchy = "5"

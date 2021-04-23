@@ -7,3 +7,5 @@ class R1360(IReg):
         self._header = ['REG',
                         'NUM_LACRE',
                         'DT_APLICACAO']
+
+        self._hierarchy = "3"

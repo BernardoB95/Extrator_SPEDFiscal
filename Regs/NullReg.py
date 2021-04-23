@@ -13,3 +13,6 @@ class NullReg(IReg):
 
     def header(self):
         pass
+
+    def hierarchy(self):
+        pass

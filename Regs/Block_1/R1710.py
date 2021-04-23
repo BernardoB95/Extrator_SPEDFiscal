@@ -7,3 +7,5 @@ class R1710(IReg):
         self._header = ['REG',
                         'NUM_DOC_INI',
                         'NUM_DOC_FIN']
+
+        self._hierarchy = "3"

@@ -18,3 +18,5 @@ class RD170(IReg):
                         'VL_FRT',
                         'VEIC_ID',
                         'UF_ID']
+
+        self._hierarchy = "3"

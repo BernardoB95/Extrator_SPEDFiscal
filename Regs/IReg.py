@@ -15,3 +15,23 @@ class IReg(ABC):
     @property
     def header(self):
         return self._header
+
+    @property
+    def hierarchy(self):
+        return  self._hierarchy
+
+    @property
+    def id(self):
+        return self._id
+
+    @id.setter
+    def id(self, index):
+        self._id = index
+
+    @property
+    def id_super(self):
+        return self._id_super
+
+    @id_super.setter
+    def id_super(self, id_pai):
+        self._id_super = id_pai

@@ -18,3 +18,5 @@ class R1980(IReg):
                         'G4_10',
                         'G4_11',
                         'G4_12']
+
+        self._hierarchy = "2"

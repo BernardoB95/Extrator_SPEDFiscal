@@ -10,3 +10,5 @@ class RC179(IReg):
                         'ICMS_ST_COMPL',
                         'BC_RET',
                         'ICMS_RET']
+
+        self._hierarchy = "4"

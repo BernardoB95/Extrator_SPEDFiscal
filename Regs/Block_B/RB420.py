@@ -11,3 +11,5 @@ class RB420(IReg):
                         'VL_ISNT_ISS',
                         'VL_ISS',
                         'COD_SERV']
+
+        self._hierarchy = "2"

@@ -15,3 +15,5 @@ class RD150(IReg):
                         'VL_TX_RED',
                         'VL_OUT',
                         'VL_TX_ADV']
+
+        self._hierarchy = "3"

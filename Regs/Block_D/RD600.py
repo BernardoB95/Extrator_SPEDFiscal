@@ -22,3 +22,5 @@ class RD600(IReg):
                         'VL_ICMS',
                         'VL_PIS',
                         'VL_COFINS']
+
+        self._hierarchy = "2"

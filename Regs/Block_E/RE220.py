@@ -8,3 +8,5 @@ class RE220(IReg):
                         'COD_AJ_APUR',
                         'DESCR_COMPL_AJ',
                         'VL_AJ_APUR']
+
+        self._hierarchy = "4"

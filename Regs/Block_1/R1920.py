@@ -17,3 +17,5 @@ class R1920(IReg):
                         'VL_ICMS_RECOLHER_OA',
                         'VL_SLD_CREDOR_TRANSP_OA',
                         'DEB_ESP_OA']
+
+        self._hierarchy = "4"

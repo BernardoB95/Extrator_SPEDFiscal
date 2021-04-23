@@ -8,3 +8,5 @@ class RC174(IReg):
                         'IND_ARM',
                         'NUM_ARM',
                         'DESCR_COMPL']
+
+        self._hierarchy = "4"

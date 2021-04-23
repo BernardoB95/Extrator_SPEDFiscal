@@ -9,3 +9,5 @@ class RK235(IReg):
                         'COD_ITEM',
                         'QTD',
                         'COD_INS_SUBST']
+
+        self._hierarchy = "4"

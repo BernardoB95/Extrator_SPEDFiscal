@@ -25,3 +25,5 @@ class RB020(IReg):
                         'VL_ISS_RT',
                         'VL_ISS',
                         'COD_INF_OBS']
+
+        self._hierarchy = "2"

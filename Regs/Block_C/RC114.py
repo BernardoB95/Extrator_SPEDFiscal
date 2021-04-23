@@ -10,3 +10,5 @@ class RC114(IReg):
                         'ECF_CX',
                         'NUM_DOC',
                         'DT_DOC']
+
+        self._hierarchy = "4"

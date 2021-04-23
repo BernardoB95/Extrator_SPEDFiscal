@@ -9,3 +9,5 @@ class RD110(IReg):
                         'COD_ITEM',
                         'VL_SERV',
                         'VL_OUT']
+
+        self._hierarchy = "3"

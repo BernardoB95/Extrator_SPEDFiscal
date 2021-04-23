@@ -7,3 +7,5 @@ class R0400(IReg):
         self._header = ['REG',
                         'COD_NAT',
                         'DESCR_NAT']
+
+        self._hierarchy = "2"

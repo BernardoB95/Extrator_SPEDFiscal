@@ -15,3 +15,5 @@ class R1300(IReg):
                         'VAL_AJ_PERDA',
                         'VAL_AJ_GANHO',
                         'FECH_FISICO']
+
+        self._hierarchy = "2"

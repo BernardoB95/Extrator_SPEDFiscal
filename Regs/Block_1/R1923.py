@@ -14,3 +14,5 @@ class R1923(IReg):
                         'COD_ITEM',
                         'VL_AJ_ITEM',
                         'CHV_DOCe']
+
+        self._hierarchy = "6"

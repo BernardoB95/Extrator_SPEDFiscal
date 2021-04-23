@@ -8,3 +8,5 @@ class RC172(IReg):
                         'VL_BC_ISSQN',
                         'ALIQ_ISSQN',
                         'VL_ISSQN']
+
+        self._hierarchy = "4"

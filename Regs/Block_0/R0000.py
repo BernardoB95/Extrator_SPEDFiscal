@@ -20,5 +20,5 @@ class R0000(IReg):
                         'IND_PERFIL',
                         'IND_ATIV']
 
-
+        self._hierarchy = "0"
 

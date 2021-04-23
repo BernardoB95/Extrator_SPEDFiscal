@@ -10,3 +10,5 @@ class RC870(IReg):
                         'UNID',
                         'CST_ICMS',
                         'CFOP']
+
+        self._hierarchy = "3"

@@ -14,3 +14,5 @@ class R0005(IReg):
                         'FONE',
                         'FAX',
                         'EMAIL']
+
+        self._hierarchy = "2"

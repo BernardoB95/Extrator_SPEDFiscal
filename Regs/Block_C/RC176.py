@@ -31,3 +31,5 @@ class RC176(IReg):
                         'COD_DA',
                         'NUM_DA',
                         'VL_UNIT_RESP_FCP_ST']
+
+        self._hierarchy = "4"

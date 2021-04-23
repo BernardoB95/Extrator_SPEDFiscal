@@ -17,3 +17,5 @@ class R0200(IReg):
                         'COD_LST',
                         'ALIQ_ICMS',
                         'CEST']
+
+        self._hierarchy = "2"
