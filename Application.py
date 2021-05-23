@@ -89,6 +89,8 @@ class Ui_MainWindow(object):
         self.Registers_Field.setGeometry(QtCore.QRect(20, 250, 471, 31))
         self.Registers_Field.setObjectName("Registers_Field")
         self.LogOutput_Field = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.LogOutput_Field.setEnabled(False)
+        self.LogOutput_Field.setStyleSheet('background-color: white')
         self.LogOutput_Field.setGeometry(QtCore.QRect(20, 320, 471, 131))
         self.LogOutput_Field.setObjectName("LogOutput_Field")
         self.line_2 = QtWidgets.QFrame(self.centralwidget)
@@ -114,12 +116,23 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        # region Events
+        self.Close_Button.clicked.connect(lambda: MainWindow.close())
+        self.Input_Button.clicked.connect(self.click_selecionar_input)
+        self.Output_Button.clicked.connect(self.click_selecionar_output)
+        self.Registers_Checkbox.toggled.connect(self.selecionar_registros_is_checked)
+        self.Registers_Checkbox.toggled.connect(self.processing_prerequisites)
+        self.InputText_Field.textChanged.connect(self.processing_prerequisites)
+        self.OutputText_Field.textChanged.connect(self.processing_prerequisites)
+        self.Registers_Field.textChanged.connect(self.processing_prerequisites)
+        # endregion
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.ReadingDir_Label.setText(_translate("MainWindow", "Selecionar Diretorio de Leitura"))
         self.Input_Button.setText(_translate("MainWindow", "Selecionar"))
-        self.WritingDir_Label.setText(_translate("MainWindow", "Selecionar Diretorio de Leitura"))
+        self.WritingDir_Label.setText(_translate("MainWindow", "Selecionar Diretorio de Escrita"))
         self.Output_Button.setText(_translate("MainWindow", "Selecionar"))
         self.Process_Button.setText(_translate("MainWindow", "Process"))
         self.Close_Button.setText(_translate("MainWindow", "Fechar"))
@@ -132,10 +145,58 @@ class Ui_MainWindow(object):
         :return: Directory Name
         :rtype: str
         """
-        #dir_ = QtGui
+        __dir = QtWidgets.QFileDialog.getExistingDirectory(None,
+                                                          'Selecionar Diretorio de Leitura',
+                                                          'C:\\')
+
+        self.InputText_Field.setText(__dir)
 
     def click_selecionar_output(self):
-        pass
+        """
+        This fucntion will open up a window to select the directory
+        :return: Directory Name
+        :rtype: str
+        """
+        __dir = QtWidgets.QFileDialog.getExistingDirectory(None,
+                                                           'Selecionar Diretorio de Escrita',
+                                                           'C:\\')
+
+        self.OutputText_Field.setText(__dir)
+
+    def selecionar_registros_is_checked(self):
+        """
+        This function will enable or disable the manual input of REGs to be processed.
+        :return: None
+        """
+        state = self.Registers_Checkbox.isChecked()
+
+        self.Registers_Field.setEnabled(state)
+
+    def processing_prerequisites(self):
+        """
+        This function will check all pre-requisites before processing in order to enable the button.
+        :return: None
+        """
+        register_state = self.Registers_Checkbox.isChecked()
+
+        if self.InputText_Field.toPlainText() != "" and self.OutputText_Field.toPlainText() != "":
+
+            if register_state and self.Registers_Field.toPlainText() != "":
+                self.Process_Button.setEnabled(True)
+            elif not register_state:
+                self.Process_Button.setEnabled(True)
+            else:
+                self.Process_Button.setEnabled(False)
+        else:
+            self.Process_Button.setEnabled(False)
+
+    def click_process(self):
+        """
+        This is the main function that will take as arguments all data inputted on the text fields above
+        :return: None
+        """
+        # TODO implement print function for verbosity
+        # TODO bind input to argparse to implement Engine main function
 
 
 if __name__ == "__main__":
