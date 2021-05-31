@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
         self.Registers_Field.setObjectName("Registers_Field")
         self.LogOutput_Field = QtWidgets.QPlainTextEdit(self.centralwidget)
         self.LogOutput_Field.setReadOnly(True)
-        self.LogOutput_Field.setStyleSheet('background-color: white')
+        self.LogOutput_Field.setStyleSheet('background-color: white; font-size: 11px')
         self.LogOutput_Field.setGeometry(QtCore.QRect(20, 320, 471, 131))
         self.LogOutput_Field.setObjectName("LogOutput_Field")
         self.line_2 = QtWidgets.QFrame(self.centralwidget)
@@ -169,7 +169,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Extrator SPED Fiscal"))
         self.ReadingDir_Label.setText(_translate("MainWindow", "Selecionar Diretorio de Leitura"))
         self.Input_Button.setText(_translate("MainWindow", "Selecionar"))
         self.WritingDir_Label.setText(_translate("MainWindow", "Selecionar Diretorio de Escrita"))
