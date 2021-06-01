@@ -1,4 +1,5 @@
 # Imports
+from abc import ABC, abstractmethod
 from Utils import load_factory, reg_logger, reg_size_logger, no_regs_identified_logger, Reader, Binder
 from Regs import NullReg
 from collections import defaultdict
@@ -6,7 +7,7 @@ from pandas import DataFrame, ExcelWriter
 import os
 
 
-class ProcessingEngine:
+class IProcessingEngine(ABC):
 
     def __init__(self, args):
         self._file_id = 0
@@ -15,7 +16,7 @@ class ProcessingEngine:
         self.verbosity = args.verbose
         self.input_dir = args.input_dir
 
-
+    @abstractmethod
     def main(self):
         """
         This is the real main function embedded in an engine that will orchestrate the app.
@@ -25,13 +26,15 @@ class ProcessingEngine:
         file_generator = file_reader.ReadFilesGenerator()
 
         if self.verbosity:
-            print('Reading all .txt files from directory {}'.format(self.input_dir))
+            message = 'Reading all .txt files from directory {}'.format(self.input_dir)
+            self.print_message(message)
 
         self._file_id = 0
         for name, file in file_generator:
 
             if self.verbosity:
-                print("Extracting values from file: {0}".format(name))
+                message = "Extracting values from file: {0}".format(name)
+                self.print_message(message)
 
             self._file_id += 1
             BINDING_PRINT_ONCE = True
@@ -49,7 +52,8 @@ class ProcessingEngine:
                 reg_obj.id = index
 
                 if self.verbosity and BINDING_PRINT_ONCE:
-                    print("Applying binding rule to the REGs")
+                    message = "Applying binding rule to the REGs"
+                    self.print_message(message)
                     BINDING_PRINT_ONCE = False
 
                 reg_binder.bind_id(reg_obj)
@@ -63,12 +67,14 @@ class ProcessingEngine:
                     reg_logger(reg, name)
 
                     if self.verbosity:
-                        print("A REG read in the file was not recognized as a valid one. Please, check out the log")
+                        message = "A REG read in the file was not recognized as a valid one. Please, check out the log"
+                        self.print_message(message)
 
             irregular_values = list()
 
             if self.verbosity:
-                print("Grouping information by REGs...")
+                message = "Grouping information by REGs..."
+                self.print_message(message)
 
             for k, v in sped_dict.items():
 
@@ -89,7 +95,7 @@ class ProcessingEngine:
                         raise Exception("Tamanho de arrays diferente no registro {}".format(reg))
 
                     # Delete non-selected REGs without going to log
-                    if not any('R'+r == k for r in self.choices):
+                    if not any('R' + r == k for r in self.choices):
                         irregular_values.append(k)
 
                     reg_df = DataFrame(reg_lst, columns=header)
@@ -100,7 +106,8 @@ class ProcessingEngine:
                     irregular_values.append(k)
 
                     if self.verbosity:
-                        print("A difference in REG size was found. Please, check out the log.")
+                        message = "A difference in REG size was found. Please, check out the log."
+                        self.print_message(message)
 
                     continue
 
@@ -117,7 +124,6 @@ class ProcessingEngine:
 
                 with ExcelWriter(output_directory) as writer:
                     for k, v in sped_dict.items():
-
                         v.to_excel(writer, sheet_name=k, index=False, encoding='mbcs', engine='xlsxwriter')
 
             except IndexError:
@@ -125,9 +131,15 @@ class ProcessingEngine:
                 no_regs_identified_logger(name)
 
                 if self.verbosity:
-                    print("No Regs identified in one of the files, please check the log.")
+                    message = "No Regs identified in one of the files, please check the log."
+                    self.print_message(message)
 
                 continue
 
             if self.verbosity:
-                print("File {0} exported into directory: {1}".format(excel_output_name, self.output_dir))
+                message = "File {0} exported into directory: {1}".format(excel_output_name, self.output_dir)
+                self.print_message(message)
+
+    @abstractmethod
+    def print_message(self, message):
+        print(message)
